@@ -142,9 +142,9 @@ BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /vendor/lib/egl/libGLES_mali.so|libgutils.so \
-    /vendor/bin/gpsd|libshim_gps.so \
-    /vendor/lib/libexynoscamera.so|libshim_camera.so
+    /vendor/lib/egl/libGLES_mali.so|/vendor/lib/libgutils.so \
+    /vendor/bin/gpsd|/vendor/lib/libshim_gps.so \
+    /vendor/lib/libexynoscamera.so|/vendor/lib/libshim_camera.so
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
