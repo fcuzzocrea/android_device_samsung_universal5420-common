@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The Android Open Source Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,22 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 LOCAL_PATH := $(call my-dir)
 
-
 include $(CLEAR_VARS)
-<<<<<<< HEAD:libshims/libshim_gps/Android.mk
-=======
-LOCAL_SRC_FILES := libgutils.c
+LOCAL_SRC_FILES := popcountsi2.c process_name.c
 LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_MODULE := libgutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
->>>>>>> efbcbf99 (libGLES: Update mali shim to Oreo):libgutils/Android.mk
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils libsensor
-LOCAL_SRC_FILES := libshim_gps.cpp
-LOCAL_MODULE := libshim_gps
-LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
+
