@@ -177,6 +177,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_camera \
     libshim_gps \
     libgutils
 
