@@ -114,6 +114,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_gps \
+    libgutils
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
