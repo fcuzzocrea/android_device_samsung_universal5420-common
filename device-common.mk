@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf \
-    $(COMMON_PATH)/configs/gps/gps.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.xml
+    $(COMMON_PATH)/configs/gps/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gps.xml
 
 
 # Graphics
