@@ -51,10 +51,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdcp2.rx=tz
 
-# USB
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
