@@ -75,4 +75,7 @@ sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" $BLOB_ROOT
 # Update trustlets location
 sed -i 's|system/app|vendor/app|g' $BLOB_ROOT/vendor/bin/mcDriverDaemon
 
+# Mali blobs needs arm libm intrinsics deprecated in Q
+patchelf --replace-needed libm.so libw.so $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so
+
 "${MY_DIR}"/setup-makefiles.sh
