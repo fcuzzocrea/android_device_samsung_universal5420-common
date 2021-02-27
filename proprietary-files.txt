@@ -8,6 +8,9 @@ lib/libaptX_encoder.so:vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced20573
 lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
 lib/libvdis.so:vendor/lib/libvdis.so
 
+# Gatekeeper
+lib/hw/gatekeeper.exynos5420.so:vendor/lib/hw/gatekeeper.universal5420.so
+
 # GPS
 bin/gpsd:vendor/bin/gpsd
 lib/hw/gps.default.so:vendor/lib/hw/gps.universal5420.so
