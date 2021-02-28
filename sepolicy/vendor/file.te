@@ -1,9 +1,15 @@
+# file.te
 
+# data types
 type display_vendor_data_file, file_type, data_file_type;
 
+# debug types
+type debugfs_ion, fs_type, debugfs_type;
+type debugfs_mali, fs_type, debugfs_type;
+type debugfs_mali_mem, fs_type, debugfs_type;
 
+# sysfs types
 type sysfs_mdnie, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_mipi_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_multipdp_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_usb_power_writable, fs_type, sysfs_type, mlstrustedobject;
-type preloader_block_device, dev_type;
