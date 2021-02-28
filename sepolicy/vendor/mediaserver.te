@@ -1,0 +1,9 @@
+# mediaserver.te
+
+allow mediaserver {
+    debugfs_ion
+    debugfs_mali
+    debugfs_mali_mem
+}:dir search;
+
+binder_call(mediaserver, hal_camera_default)

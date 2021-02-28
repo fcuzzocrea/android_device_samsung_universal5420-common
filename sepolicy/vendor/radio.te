@@ -1,0 +1,5 @@
+# radio.te
+
+allow radio debugfs_mali:dir search;
+
+binder_call(radio, gpuservice)
