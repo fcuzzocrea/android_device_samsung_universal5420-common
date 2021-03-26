@@ -69,6 +69,12 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 sed -i 's|EGL_KHR_surfaceless_context|EGL_HAX_surfaceless_context|g' $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so
 
+# Ignore HW revision check error by changing a "bne" instruction into "beq"
+hexdump -ve '1/1 "%.2X"' $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so | \
+        sed "s/0A20A0E1F33401EB000050E30500001A/0A20A0E1F33401EB000050E30500000A/g" | \
+        xxd -r -p > $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so.patched
+mv $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so.patched $BLOB_ROOT/vendor/lib/egl/libGLES_mali.so
+
 # Update trustlets location
 sed -i 's|system/app|vendor/app|g' $BLOB_ROOT/vendor/bin/mcDriverDaemon
 
